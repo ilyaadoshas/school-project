@@ -1,0 +1,152 @@
+{
+    "courses": [
+        {
+            "id": 1001,
+            "name": "java",
+            "units": 4
+        },
+        {
+            "id": 1002,
+            "name": "c#",
+            "units": 3
+        },
+        {
+            "id": 1003,
+            "name": "py",
+            "units": 4
+        }
+    ],
+    "students": [
+        {
+            "id": 2001,
+            "name": "ali",
+            "family": "rezaie",
+            "courses":[[1001,17],[1002,0]]
+        },
+        {
+            "id": 2002,
+            "name": "reza",
+            "family": "alinia",
+            "courses":[[1002,8]]
+        },
+        {
+            "id": 2003,
+            "name": "ahmad",
+            "family": "hoseini",
+            "courses":[[1002,15],[1003,11]]
+        },
+        {
+            "id":2004,
+            "name":"amir",
+            "family":"hassani",
+            "courses":[[1001,8]]
+        },
+        {
+            "id":2005,
+            "name":"afshin",
+            "family":"por rajab",
+            "courses":[[1003,3]]
+        },
+        {
+            "id":2006,
+            "name":"armin",
+            "family":"askari",
+            "courses":[[1002,14]]
+        },
+        {
+            "id":2007,
+            "name":"amin",
+            "family":"gahani",
+            "courses":[[1001,7]]
+        },
+        {
+            "id":2008,
+            "name":"vahid",
+            "family":"gorban dost",
+            "courses":[[1002,1]]
+        },
+        {
+            "id":2009,
+            "name":"taha",
+            "family":"lotfi",
+            "courses":[[1001,18]]
+        },
+        {
+            "id":2010,
+            "name":"nader",
+            "family":"amiri",
+            "courses":[[1003,13]]
+        },
+        {
+            "id":2011,
+            "name":"ramtin",
+            "family":"shojaii",
+            "courses":[[1002,20]]
+        },
+        {
+            "id":2012,
+            "name":"porya",
+            "family":"khashaiari",
+            "courses":[[1001,9]]
+        },
+        {
+            "id":2013,
+            "name":"farhad",
+            "family":"khorsand",
+            "courses":[[1001,20]]
+        },
+        {
+            "id":2014,
+            "name":"ilia",
+            "family":"adosha",
+            "courses":[[1001,5]]
+        },
+        {
+            "id":2015,
+            "name":"danial",
+            "family":"mahdavian",
+            "courses":[[1003,4]]
+        },
+        {
+            "id":2016,
+            "name":"kamiyar",
+            "family":"rostami",
+            "courses":[[1002,12]]
+        },
+        {
+            "id":2017,
+            "name":"babak",
+            "family":"zanjani",
+            "courses":[[1002,19]]
+        },
+        {
+            "id":2018,
+            "name":"ghasem",
+            "family":"solemani",
+            "courses":[[1003,0]]
+        }
+    ],
+    "teachers": [
+        {
+            "id": 3001,
+            "name": "alireza",
+            "family": "ahmadi",
+            "grade": "HTP",
+            "courses":[1001,1002]
+        },
+        {
+            "id": 3002,
+            "name": "alinia",
+            "family": "mohammadi",
+            "grade": "BSC",
+            "courses":[1003]
+        },
+        {
+            "id": 3003,
+            "name": "mohammad",
+            "family": "ahmadi",
+            "grade": "MSC",
+            "courses":[1001,1003]
+        }
+    ]
+}
