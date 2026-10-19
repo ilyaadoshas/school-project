@@ -1,5 +1,5 @@
 # Introduction
-This project is a school management system with a text-based interface, written in Python. With this project, you can archive a school's information. You can add, delete, view, and edit the data of students, teachers, and courses. Each student can take several courses, and each teacher can teach several courses. The data is saved in a file so that it can be used again the next time.
+This project is a school management system with a text-based interface, written in `Python`. With this project, you can archive a school's information. You can add, delete, view, and edit the data of students, teachers, and courses. Each student can take several courses, and each teacher can teach several courses. The data is saved in a file so that it can be used again the next time.
 ### Data Storage
 All of the program's data is stored in a file named `data.json` in `JSON` format. This file consists of three sections: 
 - courses : which contains the ID, name, and units of each course 
