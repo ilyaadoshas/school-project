@@ -5,6 +5,15 @@ All of the program's data is stored in a file named `data.json` in `JSON` format
 1. courses : Contains the ID, name, and units of each course.
 2. students : Contains the ID, first name, last name, and courses of each student 
 3. teachers : Contains the ID, first name, last name, academic degree, and the courses each  teacher teaches.
-4. classrooms : Contains the ID,name,teachers and tudents.
+4. classrooms : Contains the ID,name,teachers and students.
 
 When the program runs, this file is read automatically and its data is converted into objects so that they can be worked with. After making changes, you can save them to the data.json file by selecting the save option from the main menu.
+### Students
+| property | describtion |
+|---|---|
+|id (int)|The student’s unique identifier, used to find, edit, and delete the student.|
+|name(str)| The student’s first name.
+|family(str)|The student’s last name.
+|courses(list[Course])|The courses the student has enrolled in. The score for each course is stored on these course objects.|
+
+### Teachers
