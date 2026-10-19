@@ -41,7 +41,7 @@ When the program runs, this file is read automatically and its data is converted
 |name (str)| The name of the classroom.|
 |course (Course)| The course that is taught in this classroom.|
 |teacher (Teacher)| The teacher who teaches this course in the classroom.|
-|student (list[Student])| The students enrolled in this classroom.|
+|students (list[Student])| The students enrolled in this classroom.|
 
 ### School
 | property | describtion |
