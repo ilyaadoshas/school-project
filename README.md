@@ -9,7 +9,7 @@ All of the program's data is stored in a file named `data.json` in `JSON` format
 
 When the program runs, this file is read automatically and its data is converted into objects so that they can be worked with. After making changes, you can save them to the data.json file by selecting the save option from the main menu.
 ## Classes
-### Students
+### Student
 | property | describtion |
 |---|---|
 |id (int)|The student’s unique identifier, used to find, edit, and delete the student.|
@@ -17,7 +17,7 @@ When the program runs, this file is read automatically and its data is converted
 |family(str)|The student’s last name.
 |courses(list[Course])|The courses the student has enrolled in. The score for each course is stored on these course objects.|
 
-### Teachers
+### Teacher
 | property | describtion |
 | --- | --- |
 |id (int)| The teacher’s unique identifier, used to find, edit, and delete the teacher.|
@@ -26,10 +26,28 @@ When the program runs, this file is read automatically and its data is converted
 |grade (str)| The teacher’s academic degree, such as BSC or MSC.|
 |courses (list[Course])| The courses the teacher is assigned to teach.|
 
-### Courses
+### Course
 | property | describtion |
 | --- | --- |
 |id (int)| The course’s unique identifier, used to find, edit, and delete the course|
 |name (str)| The name of the course, such as java or py.|
 |unit (int)| The number of units (credits) of the course|
 |score (float)| The student’s score in this course.|
+
+### Classroom
+| property | describtion |
+| --- | --- |
+|id (int)| The classroom’s unique identifier.|
+|name (str)| The name of the classroom.|
+|course (Course)| The course that is taught in this classroom.|
+|teacher (Teacher)| The teacher who teaches this course in the classroom.|
+|student (list[Student])| The students enrolled in this classroom.|
+
+### School
+| property | describtion |
+| --- | --- |
+|name (str)| The name of the school.|
+|courses (list[Course])| All the courses defined in the school.|
+|teachers (list[Teacher])| All the teachers registered in the school.|
+|students (list[Student])| All the students registered in the school.|
+|selected_student (Student)| The student currently selected in the menu, which the “select student” options work on.|
