@@ -52,4 +52,19 @@ When the program runs, this file is read automatically and its data is converted
 |students (list[Student])| All the students registered in the school.|
 |selected_student (Student)| The student currently selected in the menu, which the “select student” options work on.|
 # How it works ?
-
+When you run the program , the main menu is printed :
+```
+1.students
+2.teachers
+3.courses
+4.classrooms
+5.save
+0.exit
+)):
+```
+1. Opens the students menu .Where you can print all students , add a student , delete a student and edit a student and select a student from all students which opens another menu.In this menu you can see there full information, add a course , remove a course and set there score .
+2. Opens the teacher menu , which almost works like students menu .
+3. Opens the courses menu , where you can print, add, edit, and delete courses.
+4. In this menu you can manage classrooms(a course , its teacher and its students)
+5. Save the current changes you made . (Changes you make stay in memory until you choose this option .)
+  
