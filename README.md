@@ -67,4 +67,44 @@ When you run the program , the main menu is printed :
 3. Opens the courses menu , where you can print, add, edit, and delete courses.
 4. In this menu you can manage classrooms(a course , its teacher and its students)
 5. Save the current changes you made . (Changes you make stay in memory until you choose this option .)
-  
+# Example
+After choosing `1` the students menu prints:
+```
+1.print students
+2.add student
+3.edit student
+4.delete student
+5.select student
+0.back
+)):
+```
+Typing `1` here prints all students:
+```
+id 	 name 	 family
+2001 	 ali 	 rezaie
+2002 	 reza 	 alinia
+2003 	 ahmad 	 hoseini
+```
+Typing `5` lets you work with one student.By entering there ID you can access to Sub_menu for that student:
+```
+id 	 name 	 family
+2001 	 ali 	 rezaie
+2002 	 reza 	 alinia
+2003 	 ahmad 	 hoseini
+id:2001
+```
+```
+1.show info
+2.add course
+3.remove course
+4.set scores
+0.back
+:))1
+id: 2001
+name: ali
+family: rezaie
+id 	 name 	 unit 	 score
+1001 	 java 	 4 	 17
+1002 	 c# 	 3 	 0
+```
+Typing `0` goes back one menu each time.
