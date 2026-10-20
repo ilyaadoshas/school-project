@@ -51,3 +51,5 @@ When the program runs, this file is read automatically and its data is converted
 |teachers (list[Teacher])| All the teachers registered in the school.|
 |students (list[Student])| All the students registered in the school.|
 |selected_student (Student)| The student currently selected in the menu, which the “select student” options work on.|
+# How it works ?
+
