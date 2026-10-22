@@ -85,7 +85,7 @@ class Classroom:
 class School:
     name:str=""
     courses:list[Course]=[]
-    teacher:list[Teacher]=[]
+    teachers:list[Teacher]=[]
     students:list[Student]=[]
     classrooms:list[Classroom]=[]
     selected_student:Student=None
@@ -102,10 +102,10 @@ class School:
             self.students.append(student)
             
     def add_teacher(self,teacher:Teacher):
-        if teacher in self.teacher:
+        if teacher in self.teachers:
             print("already exit")
         else:
-            self.teacher.append(teacher)
+            self.teachers.append(teacher)
             
     def add_course(self,course:Course):
         if course in self.courses:
@@ -140,23 +140,23 @@ class School:
 
     def print_teacher(self):
         print("id \t name \t family \t grade")
-        for teacher in self.teacher:
+        for teacher in self.teachers:
             print(teacher)
 
     def remove_teacher(self,id:int):
-        if id in self.teacher:
-            self.teacher.remove(id)
+        if id in self.teachers:
+            self.teachers.remove(id)
         else:
             print("dosent exit")
 
     def edit_teacher(self,teacher:Teacher):
-        if teacher not in self.teacher:
+        if teacher not in self.teachers:
             print("doesent exit")
         else:
-            k=self.teacher.index(teacher)
-            self.teacher[k].name=teacher.name
-            self.teacher[k].family=teacher.family
-            self.teacher[k].grade=teacher.grade
+            k=self.teachers.index(teacher)
+            self.teachers[k].name=teacher.name
+            self.teachers[k].family=teacher.family
+            self.teachers[k].grade=teacher.grade
 
     def print_courses(self):
         print("id \t name \t unit")
@@ -206,7 +206,7 @@ class School:
                 k=self.courses.index(crs)
                 course=self.courses[k]
                 teacher.courses.append(course)
-            self.teacher.append(teacher)
+            self.teachers.append(teacher)
 
 
     def save_data(self):
@@ -214,7 +214,7 @@ class School:
         teachers=[]
         students=[]
 
-        for teacher in self.teacher:
+        for teacher in self.teachers:
             courses=[]
             for c in teacher.courses:
                 courses.append(c.id)
@@ -248,8 +248,8 @@ sc1.load_data()
 level="root"
 while True:
     if level=="root":
-        print("1.student")
-        print("2.teacher")
+        print("1.students")
+        print("2.teachers")
         print("3.courses")
         print("4.classrooms")
         print("5.save")
@@ -285,11 +285,13 @@ while True:
             family=input("family:")
             sc1.add_student(Student(id,name,family))
         elif cmd==3:
+            sc1.print_students() 
             id=int(input("id:"))
             name=input("name:")
             family=input("family:")
             sc1.edit_student(Student(id,name,family))
         elif cmd==4:
+            sc1.print_students() 
             id=int(input("id:"))
             sc1.remove_student(id)
         elif cmd==5:
@@ -362,22 +364,24 @@ while True:
             grade=input("grade:")
             sc1.add_teacher(Teacher(id,name,family,grade))
         elif cmd==3:
+            sc1.print_teacher()
             id=int(input("id:"))
             name=input("name:")
             family=input("family:")
             grade=input("grade:")
             sc1.edit_teacher(Teacher(id,name,family,grade))
         elif cmd==4:
+            sc1.print_teacher()
             id=int(input("id:"))
             sc1.remove_teacher(id)
         elif cmd==5:
             sc1.print_teacher()
             id=int(input("id:"))
-            if sc1.teacher.count(id)==0:
+            if sc1.teachers.count(id)==0:
                 print("this is not exit")
             else:
-                k=sc1.teacher.index(id)
-                sc1.selected_teacher=sc1.teacher[k]
+                k=sc1.teachers.index(id)
+                sc1.selected_teacher=sc1.teachers[k]
                 level="select_teacher"
         elif cmd==0:
             level="root"
@@ -429,16 +433,19 @@ while True:
         if cmd==1:
             sc1.print_courses()
         elif cmd==2:
+            sc1.print_courses()
             id=int(input("id:"))
             name=input("name:")
             unit=input("unit:")
             sc1.add_course(Course(id,name,unit))
         elif cmd==3:
+            sc1.print_courses()
             id=int(input("id:"))
             name=input("name:")
             unit=input("unit:")
             sc1.edit_course(Course(id,name,unit))
         elif cmd==4:
+            sc1.print_courses()
             id=int(input("id:"))
             sc1.remove_course(id)
         elif cmd==5:
@@ -469,15 +476,13 @@ while True:
             else:
                 k=sc1.courses.index(id)
                 sc1.selected_course=sc1.courses[k]
-
             selected_teacher=None
-            for teacher in sc1.teacher:
+            for teacher in sc1.teachers:
                 if sc1.selected_course.id in teacher.courses :
                     print("id:",teacher.id,"name:",teacher.name,"family:",teacher.family,"grade:",teacher.grade)
             id=int(input("id:"))
-            k=sc1.teacher.index(id)
-            selected_teacher=sc1.teacher[k]
-
+            k=sc1.teachers.index(id)
+            selected_teacher=sc1.teachers[k]
             selected_student=[]
             while True:
                 for student in sc1.students:
@@ -489,7 +494,8 @@ while True:
                 if id == "x":
                     break
                 else:
-                    k=sc1.students.index(int[id])
+                    id = int(id)
+                    k=sc1.students.index(id)
                     selected_student.append(sc1.students[k])
 
         elif cmd==3:
