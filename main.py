@@ -1,5 +1,8 @@
 import json
 import copy
+from colorama import Style , init , Fore
+
+init(autoreset=True)
 
 class Course:
     id:int=0
@@ -98,25 +101,25 @@ class School:
         
     def add_student(self,student:Student):
         if student in self.students:
-            print("already exit")
+            print(Fore.RED+"already exit")
         else:
             self.students.append(student)
             
     def add_teacher(self,teacher:Teacher):
         if teacher in self.teachers:
-            print("already exit")
+            print(Fore.RED+"already exit")
         else:
             self.teachers.append(teacher)
             
     def add_course(self,course:Course):
         if course in self.courses:
-            print("already exit")
+            print(Fore.RED+"already exit")
         else:
             self.courses.append(course)
 
     def add_classroom(self,classroom:Classroom):
         if classroom in self.classrooms:
-            print("already exit")
+            print(Fore.RED+"already exit")
         else:
             self.classrooms.append(classroom)
 
@@ -129,11 +132,11 @@ class School:
             if id in self.students:
                 self.students.remove(id)
             else:
-                print("dosent exit")
+                print(Fore.RED+"dosent exit")
 
     def edit_student(self,student:Student):
         if student not in self.students:
-            print("doesent exit")
+            print(Fore.RED+"doesent exit")
         else:
             k=self.students.index(student)
             self.students[k].name=student.name
@@ -148,11 +151,11 @@ class School:
         if id in self.teachers:
             self.teachers.remove(id)
         else:
-            print("dosent exit")
+            print(Fore.RED+"dosent exit")
 
     def edit_teacher(self,teacher:Teacher):
         if teacher not in self.teachers:
-            print("doesent exit")
+            print(Fore.RED+"doesent exit")
         else:
             k=self.teachers.index(teacher)
             self.teachers[k].name=teacher.name
@@ -168,11 +171,11 @@ class School:
             if id in self.courses:
                 self.courses.remove(id)
             else:
-                print("dosent exit")
+                print(Fore.RED+"dosent exit")
                 
     def edit_course(self,course:Course):
         if course not in self.courses:
-            print("doesent exit")
+            print(Fore.RED+"doesent exit")
         else:
             k=self.courses.index(course)
             self.courses[k].name=course.name
@@ -299,7 +302,7 @@ while True:
             sc1.print_students()
             id=int(input("id:"))
             if sc1.students.count(id)==0:
-                print("this is not exit")
+                print(Fore.RED+"this is not exit")
             else:
                 k=sc1.students.index(id)
                 sc1.selected_student=sc1.students[k]
@@ -379,7 +382,7 @@ while True:
             sc1.print_teacher()
             id=int(input("id:"))
             if sc1.teachers.count(id)==0:
-                print("this is not exit")
+                print(Fore.RED+"this is not exit")
             else:
                 k=sc1.teachers.index(id)
                 sc1.selected_teacher=sc1.teachers[k]
@@ -406,7 +409,7 @@ while True:
                     print(course.id,course.name,course.unit) 
             id=int(input("id:"))
             if sc1.courses.count(id)==0:
-                print("this is not exit")
+                print(Fore.RED+"this is not exit")
             else:
                 k=sc1.courses.index(id)
                 sc1.selected_teacher.courses.append(sc1.courses[k])
