@@ -1,5 +1,6 @@
 import json
 import copy
+
 class Course:
     id:int=0
     name:str=""
